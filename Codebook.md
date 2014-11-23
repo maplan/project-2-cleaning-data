@@ -1,26 +1,32 @@
 Codebook
+========
 Getting and Cleaning the Data
-To execute the run_analysis.R the “data.table” and the “reshape2” packages ara needed.
+-----------------------------
+
+To execute the run_analysis.R the â€œdata.tableâ€ and the â€œreshape2â€ packages ara needed.
+
 Set working directory to source file.
+
 The run_analysis.R performs according to the following steps.
-1. Create a data directory
-2. Donwload and unzip de UCI repository into the data directory.
-3. Merges the training and the test sets to create one data set.
-a. Read the activity_labels.txt to know the descriptive activity names, 
-b. Read the”features.txt”, to read the list of features’ name
+
+*1. Create a data directory*
+*2. Donwload and unzip de UCI repository into the data directory.*
+*3. Merges the training and the test sets to create one data set.*
+**a. Read the activity_labels.txt to know the descriptive activity names**
+b. Read theâ€features.txtâ€, to read the list of featuresâ€™ name
 c. Prepare the test set
-i. Read the “subject_test”, “X_test”, “y_test”
+i. Read the â€œsubject_testâ€, â€œX_testâ€, â€œy_testâ€
 ii. Put names in variables X_test
-iii. Subset X_test  by names which include target strings including “mean” or “std”.
-iv. Read “y_test” and add descriptive activity names to the data set
+iii. Subset X_test  by names which include target strings including â€œmeanâ€ or â€œstdâ€.
+iv. Read â€œy_testâ€ and add descriptive activity names to the data set
 v. Put names to columns of y_test.
 vi. Add names to columns of subject_test
 d. Prepare train set following the same steps as above.
-e. Collect test_data combining “subject_test”, “y_test” and “X_test”
-f. Collect train_data combining “subject_train”, “y_train” and “X_train”
-g. Combine “test_set” and “train_set” to data_set
+e. Collect test_data combining â€œsubject_testâ€, â€œy_testâ€ and â€œX_testâ€
+f. Collect train_data combining â€œsubject_trainâ€, â€œy_trainâ€ and â€œX_trainâ€
+g. Combine â€œtest_setâ€ and â€œtrain_setâ€ to data_set
 4. Create an independent tidy data set with the average of each variable for each activity and each subject
-a. Melt the merged data set with the id of “subject” and “activity”
-b. Then “dcast()“ the melted data where as calculating the mean of each variables in the data set
-5. Write the latest data set to a txt file called "clean_data.txt” 
+a. Melt the merged data set with the id of â€œsubjectâ€ and â€œactivityâ€
+b. Then â€œdcast()â€œ the melted data where as calculating the mean of each variables in the data set
+5. Write the latest data set to a txt file called "clean_data.txtâ€ 
 
